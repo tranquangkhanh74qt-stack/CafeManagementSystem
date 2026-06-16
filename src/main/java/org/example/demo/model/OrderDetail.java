@@ -1,70 +1,81 @@
 package org.example.demo.model;
 
 public class OrderDetail {
-    private int orderDetailID;
-    private int orderID;
-    private int productID;
+    private int orderDetailId;
+    private int orderId;
+    private int productId;
     private int quantity;
-    private double price;
+    private double unitPrice;
     private double subtotal;
-    
-    public OrderDetail() {
-    }
-    
-    public OrderDetail(int orderDetailID, int orderID, int productID, int quantity, double price, double subtotal) {
-        this.orderDetailID = orderDetailID;
-        this.orderID = orderID;
-        this.productID = productID;
+    private String notes;
+
+    public OrderDetail() {}
+
+    public OrderDetail(int orderDetailId, int orderId, int productId, int quantity,
+                      double unitPrice, double subtotal, String notes) {
+        this.orderDetailId = orderDetailId;
+        this.orderId = orderId;
+        this.productId = productId;
         this.quantity = quantity;
-        this.price = price;
+        this.unitPrice = unitPrice;
         this.subtotal = subtotal;
+        this.notes = notes;
     }
-    
-    public int getOrderDetailID() {
-        return orderDetailID;
+
+    // Getters and Setters
+    public int getOrderDetailId() {
+        return orderDetailId;
     }
-    
-    public void setOrderDetailID(int orderDetailID) {
-        this.orderDetailID = orderDetailID;
+
+    public void setOrderDetailId(int orderDetailId) {
+        this.orderDetailId = orderDetailId;
     }
-    
-    public int getOrderID() {
-        return orderID;
+
+    public int getOrderId() {
+        return orderId;
     }
-    
-    public void setOrderID(int orderID) {
-        this.orderID = orderID;
+
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
     }
-    
-    public int getProductID() {
-        return productID;
+
+    public int getProductId() {
+        return productId;
     }
-    
-    public void setProductID(int productID) {
-        this.productID = productID;
+
+    public void setProductId(int productId) {
+        this.productId = productId;
     }
-    
+
     public int getQuantity() {
         return quantity;
     }
-    
+
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-    
-    public double getPrice() {
-        return price;
+
+    public double getUnitPrice() {
+        return unitPrice;
     }
-    
-    public void setPrice(double price) {
-        this.price = price;
+
+    public void setUnitPrice(double unitPrice) {
+        this.unitPrice = unitPrice;
     }
-    
+
     public double getSubtotal() {
         return subtotal;
     }
-    
+
     public void setSubtotal(double subtotal) {
         this.subtotal = subtotal;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
     }
 }
